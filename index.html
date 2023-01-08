@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block title %}Image colour palette Generator{% endblock %}
+
+{% block content %}
+<div class="container_index container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1>Add a new cafe into the database</h1>
+      
+      {{ wtf.quick_form(form,enctype="multipart/form-data") }}
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}
